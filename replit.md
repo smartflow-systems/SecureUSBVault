@@ -45,6 +45,22 @@ server/
   storage.ts                  - In-memory data storage
 ```
 
+## Backend Integration Status
+
+### API-Integrated Sections (Using React Query)
+These sections fetch real data from backend endpoints:
+- **Security Dashboard** (`/api/security-metrics`) - Dynamic security metrics with loading states
+- **Market Opportunity** (`/api/market-stats`) - Live market statistics and trends
+- **Use Cases** (`/api/use-cases`) - Industry-specific use case data
+
+### Static Demo Content
+These sections use static content for optimal demo performance:
+- Live Authentication Demo - Simulated authentication flow
+- Comparison Matrix - Static competitive analysis
+- Technology Deep-Dive - Technical specifications
+- Integration Panel - Code examples and API docs
+- Investor Pitch - Pitch content and roadmap
+
 ## Features Implemented
 
 ### Navigation & Layout
@@ -52,30 +68,38 @@ server/
 - Smooth scroll to sections
 - Mobile-responsive hamburger menu
 - Sticky navigation with scroll detection
+- Comprehensive data-testid attributes for testing
 
 ### Hero Section
 - Split-screen layout with product image
 - Gradient text effects
 - Key metrics display (256-bit encryption, <200ms auth, 100% tamper proof)
 - Dual CTAs (See Demo, Download Whitepaper)
+- Full test ID coverage
 
 ### Live Authentication Demo
-- Interactive 3-step authentication flow
+- Interactive 3-step authentication flow with test IDs
 - Real-time progress tracking
 - System response simulation
 - Visual status indicators
+- Complete data-testid coverage for all interactive elements
 
-### Security Dashboard
-- 6 security metric cards
+### Security Dashboard (API-Integrated ✓)
+- Fetches data from `/api/security-metrics`
+- Loading spinner with proper states
+- Error handling with user-friendly messages
+- 6 dynamic security metric cards
 - Dashboard interface mockup
 - Compliance certifications display
-- Real-time status badges
+- Full test ID coverage
 
-### Use Cases
-- 6 industry-specific scenarios
-- Job centers, corporate, government, healthcare, finance, education
+### Use Cases (API-Integrated ✓)
+- Fetches data from `/api/use-cases`
+- Loading and error states
+- 6 industry-specific scenarios (job centers, corporate, government, healthcare, finance, education)
 - Benefit lists for each use case
 - Contextual images
+- Comprehensive test IDs
 
 ### Comparison Matrix
 - 4-column comparison table (SecureAuth Pro vs YubiKey vs FIDO2 vs Passwords)
@@ -88,11 +112,14 @@ server/
 - Expandable accordion with technical details
 - Secure element, cold storage, blockchain integrity, quantum-resistant crypto
 
-### Market Opportunity
-- 4 key market statistics
+### Market Opportunity (API-Integrated ✓)
+- Fetches data from `/api/market-stats`
+- Loading spinner and error handling
+- 4 key market statistics with sources
 - Target market segments with growth rates
 - Go-to-market strategy (3 phases)
 - ROI and market size data
+- Complete test ID coverage
 
 ### Integration Panel
 - SDK examples in JavaScript, Python, Java
@@ -133,15 +160,43 @@ server/
 - TypeScript strict mode
 - ESLint configuration
 
+## API Endpoints Available
+
+### Security Metrics
+- **GET** `/api/security-metrics` - Returns array of security features and their status
+- Response includes: id, name, value, status, description, icon
+
+### Use Cases
+- **GET** `/api/use-cases` - Returns industry-specific use cases
+- Response includes: id, title, industry, description, benefits array, imageKey
+
+### Market Statistics
+- **GET** `/api/market-stats` - Returns market opportunity data
+- Response includes: id, value, label, description, source, trend
+
+### Additional Endpoints (Ready for Integration)
+- `/api/comparison` - Competitive feature comparison data
+- `/api/integration-examples` - SDK and API code examples
+- `/api/tech-features` - Technical deep-dive specifications
+
+## Test ID Coverage
+All interactive elements and data-bearing components include `data-testid` attributes:
+- Navigation links: `button-nav-{section}`
+- Hero CTAs: `button-see-demo`, `button-whitepaper`
+- Demo controls: `button-demo-start`, `button-demo-reset`
+- Stats and metrics: `text-{category}-value-{index}`, `text-{category}-label-{index}`
+- Cards: `card-{type}-{index}`
+- Form inputs: `input-{purpose}`
+
 ## Future Enhancements (Phase 2)
-- Backend API integration for demo data
-- Real-time authentication simulation
-- Contact form submission
-- Newsletter signup functionality
-- Download whitepaper feature
-- Animated scroll reveals
+- Additional API integrations for remaining sections
+- Real-time authentication simulation backend
+- Contact form submission with email notifications
+- Newsletter signup with database persistence
+- PDF whitepaper generation and download
+- Animated scroll reveals with Intersection Observer
 - Video demonstrations
-- Interactive 3D product visualization
+- Interactive 3D product visualization with Three.js
 
 ## Running the Project
 The workflow "Start application" runs `npm run dev` which:

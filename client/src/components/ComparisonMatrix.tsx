@@ -1,3 +1,4 @@
+import React from "react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle2, XCircle, MinusCircle } from "lucide-react";
@@ -99,11 +100,12 @@ export function ComparisonMatrix() {
                   </thead>
                   <tbody>
                     {features.map((category, categoryIndex) => (
-                      <>
-                        <tr key={`category-${categoryIndex}`} className="bg-muted/30">
+                      <React.Fragment key={`category-fragment-${categoryIndex}`}>
+                        <tr className="bg-muted/30">
                           <td
                             colSpan={5}
                             className="py-3 px-6 font-semibold text-sm sticky left-0 bg-muted/30 z-10"
+                            data-testid={`text-category-${categoryIndex}`}
                           >
                             {category.category}
                           </td>
@@ -131,7 +133,7 @@ export function ComparisonMatrix() {
                             </td>
                           </tr>
                         ))}
-                      </>
+                      </React.Fragment>
                     ))}
                   </tbody>
                 </table>

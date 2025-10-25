@@ -121,8 +121,9 @@ export function Footer() {
             </div>
           </div>
           <div className="text-center pt-4 border-t border-border/50">
-            <p className="text-xs text-muted-foreground">
-              Created by <span className="text-primary font-medium">Gareth Bowers</span>
+            <p className="text-xs">
+              <span className="text-muted-foreground">Created by </span>
+              <span className="text-primary font-medium">Gareth Bowers</span>
             </p>
           </div>
         </div>

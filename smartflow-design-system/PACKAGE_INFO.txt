@@ -1,0 +1,107 @@
+===============================================
+SMARTFLOW DESIGN SYSTEM - PACKAGE INFO
+===============================================
+
+Version: 1.0.0
+Created: October 2025
+Created by: Gareth Bowers
+Package Type: Design System & Component Library
+
+===============================================
+WHAT'S INCLUDED
+===============================================
+
+This package contains everything you need to add
+the SmartFlow luxurious dark gold aesthetic to
+your React/TypeScript applications.
+
+📁 Documentation:
+   - README.md (Start here!)
+   - SMARTFLOW_DESIGN_SYSTEM.md (Complete guidelines)
+   - SMARTFLOW_SETUP_GUIDE.md (Step-by-step setup)
+
+📁 styles/
+   - smartflow-theme.css (Copy to your index.css)
+
+📁 components/
+   - CircuitBackground.tsx (Animated circuit background)
+   - ScrollToTop.tsx (Floating scroll button)
+   - Navigation-Example.tsx (Header pattern)
+
+📁 examples/
+   - hero-section.tsx (Hero with circuit background)
+   - feature-grid.tsx (Feature cards grid)
+   - glass-cards.tsx (Glass-morphism patterns)
+   - cta-patterns.tsx (Call-to-action designs)
+
+===============================================
+QUICK START (5 MINUTES)
+===============================================
+
+1. Extract this package to your workspace
+
+2. Copy theme CSS:
+   cp smartflow-design-system/styles/smartflow-theme.css your-project/client/src/index.css
+
+3. Copy components you need:
+   cp smartflow-design-system/components/*.tsx your-project/client/src/components/
+
+4. Add fonts to your index.html (see SMARTFLOW_SETUP_GUIDE.md)
+
+5. Configure Tailwind (see SMARTFLOW_SETUP_GUIDE.md)
+
+6. Start building with the example patterns!
+
+===============================================
+KEY FEATURES
+===============================================
+
+✨ Luxurious dark gold color palette
+🪟 Glass-morphism card effects
+⚡ 60fps flowing circuit animations
+🎯 Ready-to-use component patterns
+📱 Fully responsive mobile-first design
+♿ WCAG AA accessible color contrasts
+🧩 Works with Shadcn UI components
+
+===============================================
+COLOR PALETTE
+===============================================
+
+Primary Gold: #FFD700
+Accent Gold:  #E6C200
+Deep Black:   #0D0D0D
+Soft Beige:   #F5F5DC
+
+===============================================
+TYPOGRAPHY
+===============================================
+
+Sans-serif: Inter
+Monospace:  JetBrains Mono
+
+===============================================
+SUPPORT & DOCUMENTATION
+===============================================
+
+All documentation is included in this package:
+- Start with README.md for overview
+- Follow SMARTFLOW_SETUP_GUIDE.md for setup
+- Reference SMARTFLOW_DESIGN_SYSTEM.md for details
+- Use examples/ folder for code patterns
+
+===============================================
+USAGE RIGHTS
+===============================================
+
+This design system is proprietary to
+SmartFlowSystems and intended for use across
+all SmartFlowSystems family applications.
+
+===============================================
+
+Created by Gareth Bowers
+SmartFlowSystems Design System v1.0.0
+© 2025 SmartFlowSystems. All rights reserved.
+
+===============================================

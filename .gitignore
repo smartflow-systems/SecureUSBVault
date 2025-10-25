@@ -7,3 +7,6 @@ vite.config.ts.*
 # ignore local backups
 index.html.bak.*
 *.bak.*
+
+index.html.bak.*
+*.bak.*

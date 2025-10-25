@@ -4,3 +4,6 @@ dist
 server/public
 vite.config.ts.*
 *.tar.gz
+# ignore local backups
+index.html.bak.*
+*.bak.*

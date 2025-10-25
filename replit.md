@@ -188,18 +188,24 @@ These sections use static content for optimal demo performance:
 - Compliance badges
 - Social links placeholder
 
-## Design System
-- **Colors**: Security-focused blues and teals
-- **Primary**: Bright blue (211 100% 50%)
-- **Accent**: Teal (189 85% 50%)
+## Design System - SmartFlow Theme
+- **Colors**: Luxurious dark gold aesthetic
+- **Primary**: Gold (#FFD700 / 51 100% 50%)
+- **Accent**: Gold-2 (#E6C200 / 51 91% 45%)
+- **Background**: Deep black (#0D0D0D / 0 0% 5%)
+- **Foreground**: Beige/White (48 10% 98%)
 - **Typography**: Inter for UI, JetBrains Mono for code
-- **Dark Mode**: Full support with automatic theme switching
-- **Spacing**: Consistent 8px grid system
-- **Components**: Shadcn UI with custom theming
+- **Glass-Morphism**: Cards with backdrop blur and gold borders
+- **Circuit Background**: Animated gold circuit animation (60 wires, 25% opacity)
+- **Dark Theme**: Unified dark gold palette (no light mode variant)
+- **Border Radius**: 16px for premium rounded corners
+- **Components**: Shadcn UI with SmartFlow custom theming
 
 ## Key Technologies
 - Smooth scroll behavior
 - Framer Motion for scroll animations and transitions
+- **Canvas Circuit Animation** - Animated background with 60 gold circuit wires
+- **Glass-Morphism Effects** - Backdrop blur with gold-tinted borders
 - Responsive design (mobile-first)
 - Accessibility features (WCAG AA compliant)
 - SEO optimizations (meta tags, Open Graph)

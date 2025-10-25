@@ -1,3 +1,4 @@
+import { CircuitBackground } from "@/components/CircuitBackground";
 import { Navigation } from "@/components/Navigation";
 import { HeroSection } from "@/components/HeroSection";
 import { LiveDemoSection } from "@/components/LiveDemoSection";
@@ -16,9 +17,10 @@ import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      <CircuitBackground />
       <Navigation />
-      <main>
+      <main className="relative z-10">
         <HeroSection />
         <div id="product" className="scroll-mt-16">
           <LiveDemoSection />

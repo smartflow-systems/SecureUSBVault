@@ -1,0 +1,69 @@
+:root{
+  --sf-black:#0D0D0D; --sf-brown:#3B2F2F; --sf-gold:#FFD700;
+  --sf-gold-2:#E6C200; --sf-beige:#F5F5DC; --sf-white:#FFFFFF;
+  --sf-radius:16px; --sf-gap:16px; --sf-blur:12px;
+}
+.gold-gradient{background:linear-gradient(90deg,var(--sf-gold),var(--sf-gold-2));}
+.text-gold{color:var(--sf-gold);}
+.bg-dark{background:var(--sf-black); color:var(--sf-white);}
+
+.glass-card{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,215,0,.22);
+  border-radius:var(--sf-radius);
+  backdrop-filter:saturate(140%) blur(var(--sf-blur));
+  box-shadow:0 10px 30px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.06);
+  padding:clamp(16px,2vw,32px);
+  transition:transform .2s ease, box-shadow .2s ease, border-color .2s;
+}
+.glass-card:hover{
+  transform:translateY(-2px);
+  border-color:rgba(230,194,0,.35);
+  box-shadow:0 18px 40px rgba(0,0,0,.5);
+}
+
+.btn{display:inline-flex;gap:10px;align-items:center;justify-content:center;
+  padding:12px 18px;border-radius:12px;border:1px solid #0000;cursor:pointer}
+.btn--gold{color:var(--sf-black); background:var(--sf-gold); border-color:rgba(230,194,0,.6)}
+.btn--gold:hover{background:var(--sf-gold-2)}
+.btn--ghost{color:var(--sf-white); background:rgba(255,255,255,.04);
+  border-color:rgba(255,215,0,.18)}
+.btn--ghost:hover{background:rgba(255,255,255,.07)}
+
+
+
+<canvas id="circuit-bg" class="circuit"></canvas>
+
+.circuit{position:fixed;inset:0;pointer-events:none;opacity:.25}
+
+<script>
+(() => {
+  const c=document.getElementById('circuit-bg'); if(!c) return;
+  const dpr=window.devicePixelRatio||1, x=c.getContext('2d');
+  function size(){c.width=innerWidth*dpr; c.height=innerHeight*dpr; x.scale(dpr,dpr)}
+  size(); addEventListener('resize',size);
+  const wires=[...Array(60)].map(()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,dx:(Math.random()-.5)*1.2,dy:(Math.random()-.5)*1.2}));
+  function tick(){
+    x.clearRect(0,0,innerWidth,innerHeight);
+    x.strokeStyle='rgba(230,194,0,.28)'; x.lineWidth=1;
+    wires.forEach(w=>{w.x=(w.x+w.dx+innerWidth)%innerWidth; w.y=(w.y+w.dy+innerHeight)%innerHeight;
+      x.beginPath(); x.moveTo(w.x,w.y); x.lineTo(w.x+8*Math.sign(w.dx||1), w.y+8*Math.sign(w.dy||1)); x.stroke();});
+    requestAnimationFrame(tick);
+  } tick();
+})();
+</script>
+
+body{margin:0; font:500 16px/1.6 system-ui,Segoe UI,Inter,sans-serif;}
+main{max-width:1100px;margin:0 auto;padding:40px 20px}
+.grid{display:grid;gap:var(--sf-gap);grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+
+Dark sections: transparent logo with subtle gold glow.
+	•	Gold sections: mono-white logo (no glow).
+	•	Keep clearspace = logo height × 0.5.
+
+⸻
+
+How to use
+	1.	Copy token + component CSS into your app’s global stylesheet (e.g. [client/src/styles/smartflow-theme.css]).
+	2.	Add the circuit canvas + JS once per app.
+	3.	Wrap content in .bg-dark; present features in .glass-card; use .btn--gold for primaries.

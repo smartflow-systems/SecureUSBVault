@@ -33,7 +33,11 @@ client/
       ComparisonMatrix.tsx    - Competitor comparison table
       TechnologySection.tsx   - Technical deep-dive
       MarketOpportunity.tsx   - Market stats and segments
+      ROICalculator.tsx       - Interactive ROI calculation tool
+      ComplianceTracker.tsx   - Certifications and compliance roadmap
+      VideoShowcase.tsx       - Video demonstrations with animations
       IntegrationPanel.tsx    - API/SDK integration examples
+      PartnerPortal.tsx       - White-label partner program
       InvestorPitch.tsx       - Problem/solution pitch
       Footer.tsx              - Footer with links and newsletter
     pages/
@@ -58,7 +62,11 @@ These sections use static content for optimal demo performance:
 - Live Authentication Demo - Simulated authentication flow
 - Comparison Matrix - Static competitive analysis
 - Technology Deep-Dive - Technical specifications
-- Integration Panel - Code examples and API docs
+- ROI Calculator - Real-time savings calculations
+- Compliance Tracker - Certification status and roadmap
+- Video Showcase - Video demonstrations with framer-motion animations
+- Integration Panel - Code examples and API docs (enhanced with 6 languages)
+- Partner Portal - White-label customization and partnership tiers
 - Investor Pitch - Pitch content and roadmap
 
 ## Features Implemented
@@ -121,11 +129,53 @@ These sections use static content for optimal demo performance:
 - ROI and market size data
 - Complete test ID coverage
 
+### ROI Calculator
+- Interactive enterprise deployment calculator
+- Real-time calculations for cost savings
+- Customizable inputs (employees, salaries, breach probability, etc.)
+- Savings breakdown (breach risk reduction, productivity gains, IT support)
+- 3-year financial projection with ROI percentages
+- Payback period analysis
+- Comprehensive data-testid coverage
+
+### Compliance Certification Tracker
+- Current certifications display (FIDO2, SOC 2, ISO 27001, NIST)
+- In-progress certifications (HIPAA, PCI DSS)
+- Compliance roadmap timeline (Q1 2024 - Q4 2025)
+- Industry-specific requirements (Government, Healthcare, Finance, Enterprise, Education, Manufacturing)
+- Certification status badges and visual indicators
+- Compliance stats dashboard
+- Full test ID coverage
+
+### Video Showcase
+- 6 video demonstration placeholders with gradients
+- Play/pause controls for each video
+- Category badges (Product Demo, Implementation, Use Case, Technical, Developer, Compliance)
+- Duration displays
+- Interactive product tour section
+- Framer-motion animations for smooth scroll reveals
+- Video controls info cards (HD Quality, Audio Tracks, Full Screen, Chapters)
+- Complete data-testid coverage
+
 ### Integration Panel
-- SDK examples in JavaScript, Python, Java
-- REST API documentation
+- SDK examples in 6 languages (JavaScript, Python, Java, Go, Ruby, .NET)
+- Installation guides for each language
+- Quick start code examples
+- REST API documentation with endpoints
 - Webhook events example
 - Code syntax highlighting
+- Authentication examples
+
+### Partner Portal
+- Interactive white-label customization preview
+- Live brand customization controls (company name, logo, colors)
+- 4 partner tiers (Bronze, Silver, Gold, Platinum)
+- Revenue sharing models (10% - 25%+)
+- Feature comparison matrix per tier
+- Partner benefits showcase
+- Customizable preview with real-time updates
+- Partnership application CTAs
+- Comprehensive data-testid coverage
 
 ### Investor Pitch
 - Problem/solution framework
@@ -149,10 +199,12 @@ These sections use static content for optimal demo performance:
 
 ## Key Technologies
 - Smooth scroll behavior
-- Intersection Observer for scroll animations (ready for implementation)
+- Framer Motion for scroll animations and transitions
 - Responsive design (mobile-first)
 - Accessibility features (WCAG AA compliant)
 - SEO optimizations (meta tags, Open Graph)
+- Real-time interactive calculations (ROI Calculator)
+- Live preview customization (Partner Portal)
 
 ## Environment
 - Development server runs on port 5000

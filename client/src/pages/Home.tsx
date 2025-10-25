@@ -6,7 +6,11 @@ import { UseCasesSection } from "@/components/UseCasesSection";
 import { ComparisonMatrix } from "@/components/ComparisonMatrix";
 import { TechnologySection } from "@/components/TechnologySection";
 import { MarketOpportunity } from "@/components/MarketOpportunity";
+import { ROICalculator } from "@/components/ROICalculator";
+import { ComplianceTracker } from "@/components/ComplianceTracker";
+import { VideoShowcase } from "@/components/VideoShowcase";
 import { IntegrationPanel } from "@/components/IntegrationPanel";
+import { PartnerPortal } from "@/components/PartnerPortal";
 import { InvestorPitch } from "@/components/InvestorPitch";
 import { Footer } from "@/components/Footer";
 
@@ -32,7 +36,11 @@ export default function Home() {
         <div id="market" className="scroll-mt-16">
           <MarketOpportunity />
         </div>
+        <ROICalculator />
+        <ComplianceTracker />
+        <VideoShowcase />
         <IntegrationPanel />
+        <PartnerPortal />
         <InvestorPitch />
         <Footer />
       </main>

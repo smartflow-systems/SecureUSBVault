@@ -1,7 +1,7 @@
 # SecureAuth Pro - Investor Demo Platform
 
 ## Overview
-A comprehensive investor demo platform showcasing a next-generation USB-based cold storage authentication system. This demo combines stunning visuals, interactive demonstrations, and detailed technical information to attract potential investors and partners.
+A comprehensive investor demo platform showcasing a next-generation USB-based cold storage authentication system. This demo combines stunning visuals, interactive demonstrations, and detailed technical information to attract potential investors and partners. Created by Gareth Bowers for SmartFlowSystems.
 
 ## Product Concept
 SecureAuth Pro is a revolutionary hardware security device that combines:
@@ -25,21 +25,23 @@ SecureAuth Pro is a revolutionary hardware security device that combines:
 client/
   src/
     components/
-      Navigation.tsx           - Fixed header with smooth scroll
+      CircuitBackground.tsx   - Flowing electric circuit canvas animation
+      Navigation.tsx          - Fixed header with smooth scroll and Integration link
+      ScrollToTop.tsx         - Floating back-to-top button
       HeroSection.tsx         - Product-first hero with split layout
       LiveDemoSection.tsx     - Interactive authentication demo
       SecurityDashboard.tsx   - Security metrics and features
       UseCasesSection.tsx     - Industry use cases
       ComparisonMatrix.tsx    - Competitor comparison table
       TechnologySection.tsx   - Technical deep-dive
+      IntegrationPanel.tsx    - API/SDK integration examples (moved higher)
       MarketOpportunity.tsx   - Market stats and segments
       ROICalculator.tsx       - Interactive ROI calculation tool
       ComplianceTracker.tsx   - Certifications and compliance roadmap
       VideoShowcase.tsx       - Video demonstrations with animations
-      IntegrationPanel.tsx    - API/SDK integration examples
       PartnerPortal.tsx       - White-label partner program
       InvestorPitch.tsx       - Problem/solution pitch
-      Footer.tsx              - Footer with links and newsletter
+      Footer.tsx              - Footer with links, newsletter, and creator credit
     pages/
       Home.tsx                - Main landing page
 shared/
@@ -72,10 +74,12 @@ These sections use static content for optimal demo performance:
 ## Features Implemented
 
 ### Navigation & Layout
-- Fixed header with glass-morphism effect
+- Fixed header with glass-morphism effect showing SmartFlowSystems branding
+- "Integration" link added to navigation menu for developer access
 - Smooth scroll to sections
 - Mobile-responsive hamburger menu
 - Sticky navigation with scroll detection
+- Floating back-to-top button with gold glass-morphism styling
 - Comprehensive data-testid attributes for testing
 
 ### Hero Section
@@ -183,10 +187,12 @@ These sections use static content for optimal demo performance:
 - Call-to-action for meetings and pitch deck
 
 ### Footer
+- SmartFlowSystems branding with SecureAuth Pro product name
 - 4-column link organization
 - Newsletter signup
 - Compliance badges
 - Social links placeholder
+- Creator credit: "Created by Gareth Bowers" in gold text
 
 ## Design System - SmartFlow Theme
 - **Colors**: Luxurious dark gold aesthetic

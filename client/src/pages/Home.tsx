@@ -6,14 +6,15 @@ import { SecurityDashboard } from "@/components/SecurityDashboard";
 import { UseCasesSection } from "@/components/UseCasesSection";
 import { ComparisonMatrix } from "@/components/ComparisonMatrix";
 import { TechnologySection } from "@/components/TechnologySection";
+import { IntegrationPanel } from "@/components/IntegrationPanel";
 import { MarketOpportunity } from "@/components/MarketOpportunity";
 import { ROICalculator } from "@/components/ROICalculator";
 import { ComplianceTracker } from "@/components/ComplianceTracker";
 import { VideoShowcase } from "@/components/VideoShowcase";
-import { IntegrationPanel } from "@/components/IntegrationPanel";
 import { PartnerPortal } from "@/components/PartnerPortal";
 import { InvestorPitch } from "@/components/InvestorPitch";
 import { Footer } from "@/components/Footer";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 export default function Home() {
   return (
@@ -35,17 +36,20 @@ export default function Home() {
         <div id="technology" className="scroll-mt-16">
           <TechnologySection />
         </div>
+        <div id="integration" className="scroll-mt-16">
+          <IntegrationPanel />
+        </div>
         <div id="market" className="scroll-mt-16">
           <MarketOpportunity />
         </div>
         <ROICalculator />
         <ComplianceTracker />
         <VideoShowcase />
-        <IntegrationPanel />
         <PartnerPortal />
         <InvestorPitch />
         <Footer />
       </main>
+      <ScrollToTop />
     </div>
   );
 }

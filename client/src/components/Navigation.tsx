@@ -27,6 +27,7 @@ export function Navigation() {
     { label: "Security", id: "security" },
     { label: "Use Cases", id: "use-cases" },
     { label: "Technology", id: "technology" },
+    { label: "Integration", id: "integration" },
     { label: "Market", id: "market" },
   ];
 

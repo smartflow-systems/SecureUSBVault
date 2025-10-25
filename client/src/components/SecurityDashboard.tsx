@@ -56,7 +56,7 @@ export function SecurityDashboard() {
         </div>
 
         <div className="mb-12">
-          <Card className="p-4 overflow-hidden">
+          <Card className="glass-card p-4 overflow-hidden">
             <img
               src={dashboardImage}
               alt="Security Dashboard Interface"
@@ -70,7 +70,7 @@ export function SecurityDashboard() {
           {metrics.map((metric, index) => {
             const Icon = iconMap[metric.icon] || Shield;
             return (
-              <Card key={metric.id} className="p-6 hover-elevate" data-testid={`card-security-metric-${index}`}>
+              <Card key={metric.id} className="glass-card p-6 hover-elevate" data-testid={`card-security-metric-${index}`}>
                 <div className="flex items-start gap-4">
                   <div className="p-3 rounded-lg bg-primary/10">
                     <Icon className="w-6 h-6 text-primary" />
@@ -96,7 +96,7 @@ export function SecurityDashboard() {
           })}
         </div>
 
-        <div className="mt-12 p-8 bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl border border-primary/20">
+        <div className="glass-card mt-12 p-8">
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div data-testid="stat-uptime">
               <p className="text-4xl font-bold text-primary mb-2" data-testid="text-uptime-value">99.99%</p>

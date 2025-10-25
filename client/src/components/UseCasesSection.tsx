@@ -79,7 +79,7 @@ export function UseCasesSection() {
             return (
               <Card
                 key={useCase.id}
-                className="overflow-hidden hover-elevate group"
+                className="glass-card overflow-hidden hover-elevate group"
                 data-testid={`card-use-case-${index}`}
               >
                 {image && (

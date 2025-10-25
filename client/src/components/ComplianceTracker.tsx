@@ -165,10 +165,10 @@ export function ComplianceTracker() {
               return (
                 <Card
                   key={index}
-                  className={`p-6 hover-elevate ${
+                  className={`glass-card p-6 hover-elevate ${
                     isCompleted ? "border-green-500/20 bg-green-500/5" :
                     isInProgress ? "border-yellow-500/20 bg-yellow-500/5" :
-                    "border-border"
+                    ""
                   }`}
                   data-testid={`card-cert-${index}`}
                 >
@@ -215,7 +215,7 @@ export function ComplianceTracker() {
         </div>
 
         {/* Compliance Roadmap */}
-        <Card className="p-8 mb-16">
+        <Card className="glass-card p-8 mb-16">
           <h3 className="text-2xl font-bold mb-8">Compliance Roadmap 2024-2025</h3>
           <div className="space-y-4">
             {roadmap.map((item, index) => {
@@ -274,7 +274,7 @@ export function ComplianceTracker() {
               const isCompliant = industry.status === "Compliant";
               
               return (
-                <Card key={index} className="p-6 hover-elevate" data-testid={`card-industry-${index}`}>
+                <Card key={index} className="glass-card p-6 hover-elevate" data-testid={`card-industry-${index}`}>
                   <div className="flex items-center gap-3 mb-4">
                     <div className="p-2 rounded-lg bg-primary/10">
                       <Icon className="w-5 h-5 text-primary" />
@@ -315,26 +315,26 @@ export function ComplianceTracker() {
 
         {/* Compliance Stats */}
         <div className="grid md:grid-cols-4 gap-6 mt-12">
-          <Card className="p-6 text-center hover-elevate">
+          <Card className="glass-card p-6 text-center hover-elevate">
             <div className="text-3xl font-bold text-green-500 mb-2">4</div>
             <p className="text-sm text-muted-foreground">Active Certifications</p>
           </Card>
-          <Card className="p-6 text-center hover-elevate">
+          <Card className="glass-card p-6 text-center hover-elevate">
             <div className="text-3xl font-bold text-yellow-500 mb-2">2</div>
             <p className="text-sm text-muted-foreground">In Progress</p>
           </Card>
-          <Card className="p-6 text-center hover-elevate">
+          <Card className="glass-card p-6 text-center hover-elevate">
             <div className="text-3xl font-bold text-primary mb-2">6</div>
             <p className="text-sm text-muted-foreground">Industries Covered</p>
           </Card>
-          <Card className="p-6 text-center hover-elevate">
+          <Card className="glass-card p-6 text-center hover-elevate">
             <div className="text-3xl font-bold text-primary mb-2">100%</div>
             <p className="text-sm text-muted-foreground">Audit Success Rate</p>
           </Card>
         </div>
 
         {/* CTA */}
-        <Card className="p-8 mt-12 bg-gradient-to-br from-primary/5 to-accent/10 border-primary/20 text-center">
+        <Card className="glass-card p-8 mt-12 text-center">
           <h3 className="text-2xl font-bold mb-4">Need Custom Compliance Support?</h3>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
             Our team can help you navigate industry-specific regulatory requirements and achieve certification for your deployment.

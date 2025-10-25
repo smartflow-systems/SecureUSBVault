@@ -109,7 +109,7 @@ export function ROICalculator() {
 
         <div className="grid lg:grid-cols-2 gap-8">
           {/* Input Panel */}
-          <Card className="p-8">
+          <Card className="glass-card p-8">
             <div className="flex items-center gap-2 mb-6">
               <Calculator className="w-6 h-6 text-primary" />
               <h3 className="text-2xl font-bold">Your Organization</h3>
@@ -217,7 +217,7 @@ export function ROICalculator() {
           {/* Results Panel */}
           <div className="space-y-6">
             {/* Key Metrics */}
-            <Card className="p-8 bg-gradient-to-br from-primary/5 to-accent/10 border-primary/20">
+            <Card className="glass-card p-8">
               <div className="flex items-center gap-2 mb-6">
                 <TrendingUp className="w-6 h-6 text-primary" />
                 <h3 className="text-2xl font-bold">ROI Summary</h3>
@@ -267,7 +267,7 @@ export function ROICalculator() {
             </Card>
 
             {/* Savings Breakdown */}
-            <Card className="p-8">
+            <Card className="glass-card p-8">
               <h4 className="font-semibold mb-4">Savings Breakdown (Annual)</h4>
               <div className="space-y-3">
                 <div className="flex items-center justify-between p-3 bg-muted/30 rounded-lg">
@@ -298,7 +298,7 @@ export function ROICalculator() {
             </Card>
 
             {/* Cost Breakdown */}
-            <Card className="p-8">
+            <Card className="glass-card p-8">
               <h4 className="font-semibold mb-4">Investment Required</h4>
               <div className="space-y-3">
                 <div className="flex items-center justify-between p-3 bg-muted/30 rounded-lg">
@@ -337,7 +337,7 @@ export function ROICalculator() {
         </div>
 
         {/* 3-Year Projection */}
-        <Card className="p-8 mt-12">
+        <Card className="glass-card p-8 mt-12">
           <h3 className="text-xl font-bold mb-6">3-Year Financial Projection</h3>
           <div className="grid md:grid-cols-3 gap-6">
             {[

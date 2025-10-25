@@ -62,7 +62,7 @@ export function TechnologySection() {
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
           <div>
             <h3 className="text-2xl font-bold mb-6">Architecture Overview</h3>
-            <Card className="p-4 overflow-hidden">
+            <Card className="glass-card p-4 overflow-hidden">
               <img
                 src={architectureImage}
                 alt="System Architecture Diagram"
@@ -78,7 +78,7 @@ export function TechnologySection() {
               {techFeatures.map((feature, index) => {
                 const Icon = feature.icon;
                 return (
-                  <Card key={index} className="p-4 hover-elevate" data-testid={`card-tech-${index}`}>
+                  <Card key={index} className="glass-card p-4 hover-elevate" data-testid={`card-tech-${index}`}>
                     <div className="flex items-start gap-3">
                       <div className="p-2 rounded-lg bg-primary/10 shrink-0">
                         <Icon className="w-5 h-5 text-primary" />
@@ -95,7 +95,7 @@ export function TechnologySection() {
           </div>
         </div>
 
-        <Card className="p-8">
+        <Card className="glass-card p-8">
           <h3 className="text-2xl font-bold mb-6">Technical Specifications</h3>
           <Accordion type="single" collapsible className="w-full">
             {techFeatures.map((feature, index) => (

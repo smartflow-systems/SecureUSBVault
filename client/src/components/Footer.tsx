@@ -55,11 +55,14 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid lg:grid-cols-5 gap-12 mb-12">
           <div className="lg:col-span-2 space-y-6">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
                 <Shield className="w-6 h-6 text-primary-foreground" />
               </div>
-              <span className="font-bold text-xl">SecureAuth Pro</span>
+              <div className="flex flex-col leading-tight">
+                <span className="text-xs text-muted-foreground font-medium">SmartFlowSystems</span>
+                <span className="font-bold text-xl">SecureAuth Pro</span>
+              </div>
             </div>
             <p className="text-muted-foreground leading-relaxed max-w-md">
               Next-generation USB-based cold storage authentication combining military-grade hardware security with blockchain-inspired credential management.
@@ -106,14 +109,21 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-muted-foreground">
-            © 2024 SecureAuth Pro. All rights reserved. Patent pending.
-          </p>
-          <div className="flex gap-6 text-sm text-muted-foreground">
-            <button className="hover:text-foreground transition-colors">Privacy Policy</button>
-            <button className="hover:text-foreground transition-colors">Terms of Service</button>
-            <button className="hover:text-foreground transition-colors">Security</button>
+        <div className="pt-8 border-t border-border">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-4">
+            <p className="text-sm text-muted-foreground">
+              © 2024 SmartFlowSystems. All rights reserved. Patent pending.
+            </p>
+            <div className="flex gap-6 text-sm text-muted-foreground">
+              <button className="hover:text-foreground transition-colors">Privacy Policy</button>
+              <button className="hover:text-foreground transition-colors">Terms of Service</button>
+              <button className="hover:text-foreground transition-colors">Security</button>
+            </div>
+          </div>
+          <div className="text-center pt-4 border-t border-border/50">
+            <p className="text-xs text-muted-foreground">
+              Created by <span className="text-primary font-medium">Gareth Bowers</span>
+            </p>
           </div>
         </div>
       </div>

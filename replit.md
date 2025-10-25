@@ -196,7 +196,7 @@ These sections use static content for optimal demo performance:
 - **Foreground**: Beige/White (48 10% 98%)
 - **Typography**: Inter for UI, JetBrains Mono for code
 - **Glass-Morphism**: Cards with backdrop blur and gold borders
-- **Circuit Background**: Animated gold circuit animation (60 wires, 25% opacity)
+- **Flowing Circuit Animation**: Premium electric circuit effect with 12 Bezier energy paths, 35 animated particles, 8 pulsing nodes, glow effects, and trail motion blur
 - **Dark Theme**: Unified dark gold palette (no light mode variant)
 - **Border Radius**: 16px for premium rounded corners
 - **Components**: Shadcn UI with SmartFlow custom theming
@@ -204,7 +204,7 @@ These sections use static content for optimal demo performance:
 ## Key Technologies
 - Smooth scroll behavior
 - Framer Motion for scroll animations and transitions
-- **Canvas Circuit Animation** - Animated background with 60 gold circuit wires
+- **Flowing Electric Circuit Animation** - Premium canvas-based animation featuring flowing energy paths along Bezier curves, 35 golden particles with varied speeds/sizes, 8 pulsing connection nodes, glow effects with radial gradients, and trail motion blur for sophisticated tech aesthetic
 - **Glass-Morphism Effects** - Backdrop blur with gold-tinted borders
 - Responsive design (mobile-first)
 - Accessibility features (WCAG AA compliant)

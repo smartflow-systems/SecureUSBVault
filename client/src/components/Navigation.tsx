@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, LayoutDashboard } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [, setLocation] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -66,6 +68,15 @@ export function Navigation() {
 
           <div className="hidden md:flex items-center gap-4">
             <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setLocation("/dashboard")}
+              data-testid="button-dashboard"
+            >
+              <LayoutDashboard className="w-4 h-4 mr-2" />
+              Dashboard
+            </Button>
+            <Button
               variant="outline"
               size="sm"
               onClick={() => scrollToSection("contact")}
@@ -101,6 +112,14 @@ export function Navigation() {
                   </button>
                 ))}
                 <div className="flex flex-col gap-2 mt-4">
+                  <Button
+                    variant="outline"
+                    onClick={() => setLocation("/dashboard")}
+                    data-testid="button-dashboard-mobile"
+                  >
+                    <LayoutDashboard className="w-4 h-4 mr-2" />
+                    Dashboard
+                  </Button>
                   <Button
                     variant="outline"
                     onClick={() => scrollToSection("contact")}

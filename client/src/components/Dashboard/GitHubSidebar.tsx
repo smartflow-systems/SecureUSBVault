@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
-import { X, Menu } from 'lucide-react';
+import { useLocation } from 'wouter';
+import { X, Menu, Home, Shield, Briefcase, Code, DollarSign, FileText, BarChart3 } from 'lucide-react';
 
 export default function GitHubSidebar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [location, setLocation] = useLocation();
 
   // Close on ESC key
   useEffect(() => {
@@ -28,13 +30,38 @@ export default function GitHubSidebar() {
   }, [isOpen]);
 
   const menuItems = [
-    { label: 'Home', href: '#home' },
-    { label: 'Features', href: '#features' },
-    { label: 'Pricing', href: '#pricing' },
-    { label: 'Documentation', href: '#docs' },
-    { label: 'Support', href: '#support' },
-    { label: 'About', href: '#about' },
+    { label: 'Home', href: '/', icon: Home, type: 'route' as const },
+    { label: 'Product Demo', href: '/#demo', icon: Shield, type: 'section' as const },
+    { label: 'Use Cases', href: '/#use-cases', icon: Briefcase, type: 'section' as const },
+    { label: 'Technology', href: '/#technology', icon: Code, type: 'section' as const },
+    { label: 'Integration', href: '/#integration', icon: FileText, type: 'section' as const },
+    { label: 'Market', href: '/#market', icon: BarChart3, type: 'section' as const },
+    { label: 'Pricing', href: '/#contact', icon: DollarSign, type: 'section' as const },
   ];
+
+  const handleNavigation = (item: typeof menuItems[0]) => {
+    setIsOpen(false);
+
+    if (item.type === 'route') {
+      setLocation(item.href);
+    } else if (item.type === 'section') {
+      const [path, hash] = item.href.split('#');
+      if (location !== path) {
+        setLocation(path);
+        setTimeout(() => {
+          const element = document.getElementById(hash);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      } else {
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }
+  };
 
   return (
     <>
@@ -79,27 +106,30 @@ export default function GitHubSidebar() {
 
         {/* Menu Items */}
         <ul className="flex-grow py-5">
-          {menuItems.map((item) => (
-            <li key={item.label}>
-              <a
-                href={item.href}
-                onClick={() => setIsOpen(false)}
-                className="block py-4 px-5 text-[#F5F5DC] hover:bg-[#3B2F2F] hover:pl-7 border-l-[3px] border-transparent hover:border-[#FFD700] transition-all duration-200"
-              >
-                {item.label}
-              </a>
-            </li>
-          ))}
+          {menuItems.map((item) => {
+            const Icon = item.icon;
+            return (
+              <li key={item.label}>
+                <button
+                  onClick={() => handleNavigation(item)}
+                  className="w-full flex items-center gap-3 py-4 px-5 text-[#F5F5DC] hover:bg-[#3B2F2F] hover:pl-7 border-l-[3px] border-transparent hover:border-[#FFD700] transition-all duration-200"
+                >
+                  <Icon className="w-4 h-4 text-[#FFD700]" />
+                  {item.label}
+                </button>
+              </li>
+            );
+          })}
         </ul>
 
         {/* Footer CTA */}
         <div className="p-5 border-t border-[#3B2F2F]">
-          <a
-            href="#contact"
+          <button
+            onClick={() => handleNavigation({ label: 'Contact', href: '/#contact', icon: Shield, type: 'section' })}
             className="block w-full py-3 px-4 bg-[#FFD700] text-[#0D0D0D] text-center font-semibold rounded hover:bg-[#E6C200] transition-colors"
           >
             Get Started
-          </a>
+          </button>
         </div>
       </nav>
     </>

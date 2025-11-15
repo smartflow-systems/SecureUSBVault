@@ -65,71 +65,87 @@ export default function GitHubSidebar() {
 
   return (
     <>
-      {/* Hamburger Button */}
+      {/* Hamburger Button - Premium Glass */}
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed top-5 left-5 z-50 p-2.5 bg-[#0D0D0D] rounded hover:bg-[#3B2F2F] transition-colors"
+        className="fixed top-5 left-5 z-50 glass-card-sm p-3 hover-glow group"
         aria-label="Toggle Menu"
       >
-        <Menu className="w-6 h-6 text-[#FFD700]" />
+        <Menu className="w-6 h-6 text-sf-gold group-hover:rotate-90 transition-transform duration-300" />
       </button>
 
-      {/* Overlay */}
+      {/* Overlay - Darker */}
       <div
         onClick={() => setIsOpen(false)}
-        className={`fixed inset-0 bg-black/70 z-40 transition-opacity duration-300 ${
+        className={`fixed inset-0 bg-black/80 backdrop-blur-sm z-40 transition-all duration-300 ${
           isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
         }`}
       />
 
-      {/* Sidebar */}
+      {/* Sidebar - Premium Glassmorphism */}
       <nav
-        className={`fixed top-0 left-0 h-screen w-[300px] bg-[#0D0D0D] text-[#F5F5DC] z-50 flex flex-col overflow-y-auto transition-transform duration-300 ${
+        className={`fixed top-0 left-0 h-screen w-[320px] glass-card-lg border-r-2 border-sf-gold/20 z-50 flex flex-col overflow-y-auto transition-all duration-300 ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
-        {/* Close Button */}
+        {/* Close Button - Glass */}
         <button
           onClick={() => setIsOpen(false)}
-          className="absolute top-4 right-4 text-[#FFD700] hover:text-[#E6C200] transition-colors"
+          className="absolute top-4 right-4 glass-card-sm p-2 hover-glow group z-10"
           aria-label="Close Menu"
         >
-          <X className="w-8 h-8" />
+          <X className="w-6 h-6 text-sf-gold group-hover:rotate-90 transition-transform duration-300" />
         </button>
 
-        {/* Header */}
-        <div className="pt-16 px-5 pb-5 border-b border-[#3B2F2F]">
-          <h2 className="text-[#FFD700] text-xl font-semibold">
-            SmartFlow Systems
-          </h2>
+        {/* Header - Premium */}
+        <div className="pt-16 px-6 pb-6 border-b border-sf-gold/20">
+          <div className="flex items-center gap-3">
+            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#FFD700] to-[#E6C200] flex items-center justify-center gold-glow">
+              <span className="text-sf-black font-bold text-lg">SF</span>
+            </div>
+            <div>
+              <h2 className="text-sf-gold text-xl font-bold tracking-tight">
+                SmartFlow
+              </h2>
+              <p className="text-sf-secondary text-xs">Systems</p>
+            </div>
+          </div>
         </div>
 
-        {/* Menu Items */}
-        <ul className="flex-grow py-5">
-          {menuItems.map((item) => {
+        {/* Menu Items - Glass Buttons */}
+        <ul className="flex-grow py-6 px-3 space-y-2">
+          {menuItems.map((item, index) => {
             const Icon = item.icon;
             return (
-              <li key={item.label}>
+              <li key={item.label} className="animate-sf-slide-in-left" style={{ animationDelay: `${index * 50}ms` }}>
                 <button
                   onClick={() => handleNavigation(item)}
-                  className="w-full flex items-center gap-3 py-4 px-5 text-[#F5F5DC] hover:bg-[#3B2F2F] hover:pl-7 border-l-[3px] border-transparent hover:border-[#FFD700] transition-all duration-200"
+                  className="w-full flex items-center gap-4 py-3.5 px-4 rounded-xl text-sf-beige glass-card-sm hover:border-sf-gold/50 hover:translate-x-2 transition-all duration-200 group"
                 >
-                  <Icon className="w-4 h-4 text-[#FFD700]" />
-                  {item.label}
+                  <div className="p-2 bg-sf-gold/10 rounded-lg group-hover:bg-sf-gold/20 transition-colors">
+                    <Icon className="w-4 h-4 text-sf-gold group-hover:scale-110 transition-transform" />
+                  </div>
+                  <span className="font-medium">{item.label}</span>
                 </button>
               </li>
             );
           })}
         </ul>
 
-        {/* Footer CTA */}
-        <div className="p-5 border-t border-[#3B2F2F]">
+        {/* Footer CTA - Premium */}
+        <div className="p-5 border-t border-sf-gold/20">
           <button
             onClick={() => handleNavigation({ label: 'Contact', href: '/#contact', icon: Shield, type: 'section' })}
-            className="block w-full py-3 px-4 bg-[#FFD700] text-[#0D0D0D] text-center font-semibold rounded hover:bg-[#E6C200] transition-colors"
+            className="btn-sf-gold w-full group"
           >
+            <Shield className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
             Get Started
           </button>
+
+          {/* Credit */}
+          <p className="text-center text-xs text-sf-secondary mt-4">
+            Created by <span className="text-sf-gold font-semibold">Gareth Bowers</span>
+          </p>
         </div>
       </nav>
     </>

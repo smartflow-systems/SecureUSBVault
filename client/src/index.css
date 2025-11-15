@@ -1,3 +1,7 @@
+/* SFS Theme Files */
+@import './styles/sfs-theme/sfs-globals.css';
+@import './styles/sfs-theme/sfs-complete-theme.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

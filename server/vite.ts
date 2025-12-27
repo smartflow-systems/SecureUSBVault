@@ -84,8 +84,13 @@ export function serveStatic(app: Express) {
 
   app.use(express.static(distPath));
 
+  const staticIndexLimiter = rateLimit({
+    windowMs: 60 * 1000, // 1 minute
+    max: 60, // limit each IP to 60 requests per minute
+  });
+
   // fall through to index.html if the file doesn't exist
-  app.use("*", (_req, res) => {
+  app.use("*", staticIndexLimiter, (_req, res) => {
     res.sendFile(path.resolve(distPath, "index.html"));
   });
 }
